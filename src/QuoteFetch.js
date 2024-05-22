@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 import axios from 'axios';
 import './App.css';
 
 export default function QuoteFetch() {
 
-    const [content, setContent] = useState('');
-    const [author, setAuthor] = useState('');
+    const [content, setContent] = useState('Click to see a quote');
+    const [author, setAuthor] = useState();
 
     const fetchQuote = async () => {
         try {
@@ -19,10 +21,12 @@ export default function QuoteFetch() {
         
     };
   return (
-    <div className='Card'> 
-          <p>"{content}"</p>
-          <p>{author}</p>
-          <button  className='Button' onClick={fetchQuote}>new Quote</button>
-    </div>
+    <Card className='m-5 bg-dark d-flex align-items-center'>
+      <Card.Body > 
+          <Card.Text className='text-light'>"{content}"</Card.Text>
+          <Card.Text  className='text-light'>{author}</Card.Text>
+          <Button  className='bg-danger border-0' onClick={fetchQuote}>New Quote</Button>
+      </Card.Body>
+    </Card>
   )
 }
