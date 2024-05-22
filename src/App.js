@@ -4,8 +4,8 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 
 function App() {
   return (
-    <Container className="bg-danger h-5 justify-content-center m-5 d-block  vw-50 vh-40 align-items-center">
-      <Row className=" justify-content-md-center">
+    <Container className="bg-danger m-5 vh-100 d-flex ">
+      <Row className='md m-auto align-self-center'>
         <Col className='md'>
           <QuoteFetch/>
         </Col>

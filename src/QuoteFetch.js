@@ -21,8 +21,8 @@ export default function QuoteFetch() {
         
     };
   return (
-    <Card className='m-5 bg-dark d-flex align-items-center'>
-      <Card.Body > 
+    <Card className='m-5 p-1 bg-dark '>
+      <Card.Body className=''> 
           <Card.Text className='text-light'>"{content}"</Card.Text>
           <Card.Text  className='text-light'>{author}</Card.Text>
           <Button  className='bg-danger border-0' onClick={fetchQuote}>New Quote</Button>
